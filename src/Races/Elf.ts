@@ -2,17 +2,15 @@ import Race from './race';
 
 export default class Elf extends Race {
   maxLifePoints: number;
-  private static elfInstances = 0;
+  private static _createdRacesInstances = 0;
 
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
-
-    this.maxLifePoints = 99;
+    this.maxLifePoints = 74;
+    Elf._createdRacesInstances += 1;
   }
 
-  static createdRacesInstances(): number {
-    Elf.elfInstances += 1;
-
-    return Elf.elfInstances;
+  static ElfInstances(): number {
+    return Elf._createdRacesInstances;
   }
-}
+} 

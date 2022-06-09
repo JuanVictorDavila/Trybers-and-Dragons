@@ -1,7 +1,7 @@
 import Dragon from './Dragon';
 import Monster from './Monster';
 import Character from './Character';
-import Battle, { PVE } from './Battle/index';
+import Battle, { PVE, PVP } from './Battle/index';
 
 const player1 = new Character('Snox');
 const player2 = new Character('Striker');
@@ -20,6 +20,8 @@ function runBattles(battles: Battle[]): void {
 
 const pve = new PVE(player1, [monster1, monster2]);
 
+const pvp = new PVP(player2, player3);
+
 export {
   player1,
   player2,
@@ -28,4 +30,5 @@ export {
   monster2,
   runBattles,
   pve,
+  pvp,
 };

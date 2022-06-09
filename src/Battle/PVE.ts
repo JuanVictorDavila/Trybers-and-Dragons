@@ -13,9 +13,9 @@ export default class PVE extends Battle {
     this._environment = environment;
   }
 
-  public get environment() { return this._environment; }
+  get environment() { return this._environment; }
 
-  private singleFight(enemy: Fighter | SimpleFighter): number {
+  private letsFight(enemy: Fighter | SimpleFighter): number {
     while (this.player.lifePoints > 0 && enemy.lifePoints > 0) {
       this.player.attack(enemy);
       enemy.attack(this.player);
@@ -24,7 +24,8 @@ export default class PVE extends Battle {
   }
 
   fight(): number {
-    const results = this._environment.map((enemy) => this.singleFight(enemy));
+    const results = this._environment.map((enemy) => this.letsFight(enemy));
+
     return results.every((result: number) => result === 1) ? 1 : -1;
   }
 }

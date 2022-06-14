@@ -1,22 +1,10 @@
 # Boas vindas ao repositório do projeto Trybers and Dragons!
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
 # Termos e acordos
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
 
 # Entregáveis
-
-<details>
-  <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary><br />
-
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
-
-  Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-</details>
 
 <details>
   <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
@@ -34,15 +22,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
     - O script utiliza o binário `find` do linux;
 
     - ~Em ambiente Windows, o `find` utilizado é o que vem na instalação do git (`C:/Program Files/Git/usr/bin/find.exe`).~
-
-</details>
-
-<details>
-  <summary><strong>🗓 Data de Entrega</strong></summary><br />
-  
-  * Este projeto é individual
-  * São `X` dias de projeto
-  * Data para entrega final do projeto: `01/06/2022 14:00`
 
 </details>
 
@@ -89,113 +68,17 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 </details>
 
 <details>
-  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
-
-  1. Clone o repositório
-
-  - `git clone https://github.com/tryber/sd-016-a-project-s-and-dragons.git`.
-  - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-016-a-project-s-and-dragons`
-
-  2. Instale as dependências
-
-  - `npm install`
-
-  3. Crie uma branch a partir da branch `main`
-
-  - Verifique se você está na branch `main`
-    - Exemplo: `git branch`
-  - Se não estiver, mude para a branch `main`
-    - Exemplo: `git checkout main`
-  - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-sd-016-a-project-s-and-dragons`
-
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-      - Exemplo:
-        - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  - Faça o `commit` inicial
-      - Exemplo:
-        - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-        - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-  - Usando o exemplo anterior: `git push -u origin joaozinho-sd-016-a-project-s-and-dragons`
-
-  6. Crie um novo `Pull Request` _(PR)_
-
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-016-a-project-s-and-dragons/pulls);
-  - Clique no botão verde _"New pull request"_;
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**;
-  - Clique no botão verde _"Create pull request"_;
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_;
-  - **Não se preocupe em preencher mais nada por enquanto!**;
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-016-a-project-s-and-dragons/pulls) e confira que o seu _Pull Request_ está criado.
-
-</details>
-
-<details>
-  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary><br />
-
-  - Faça `commits` das alterações que você fizer no código regularmente
-
-  - Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-  - Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
-</details>
-
-<details>
-  <summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br />
-
-  Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-  - Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-    - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-    - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-    - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-016-a`.
-
-  Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
-
-  Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-</details>
-
-<details>
   <summary><strong>🍀 Dicas da sorte</strong></summary><br />
 
   **⚠️ Leia as informações abaixo atentamente e siga à risca o que for pedido. ⚠️**
 
   **👀 Observações importantes:**
 
-  - O projeto deve ser desenvolvido na ordem dos requisitos (do 1 ao 13);
-
   - As importações e exportações dos arquivos devem ser feitas exatamente como estão sendo solicitadas e os nomes dos arquivos/diretórios também devem seguir à risca o que é pedido no `README.md`;
 
   - Sempre que encontrar o símbolo ⚠️ pare e leia com muita atenção o que é pedido;
 
-  - Atente ao vocabulário usado no projeto, ele é super importante para te ajudar na hora de suas pesquisas. Qualquer dúvida procure a pessoa instrutora de sua turma no `Slack` ou nas `mentorias`;
-
-  - Preste atenção às convenções, isso tem ligação direta com as boas práticas de código e de comunicação entre equipes;
+  - Atente ao vocabulário usado no projeto, ele é super importante para te ajudar na hora de suas pesquisas.
 
   - Ao longo do projeto algumas refatorações serão necessárias para que ele funcione como é esperado;
 
@@ -250,13 +133,6 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 ⚠️ **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
-
-</details>
-
-<details>
-  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
-
-  Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
 
 </details>
 

@@ -3,7 +3,7 @@
 # Entregáveis
 
 <details>
-  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+  <summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
 
   Para este projeto, você foram aplicados os princípios da arquitetura `SOLID` e os princípios de `POO` em uma estrutura de jogos de interpretação de papéis, mais conhecidos como jogos `RPG` (_Role Playing Game_).
 
@@ -76,10 +76,6 @@
 
   - Atente ao vocabulário usado no projeto, ele é super importante para te ajudar na hora de suas pesquisas.
 
-  - Ao longo do projeto algumas refatorações serão necessárias para que ele funcione como é esperado;
-
-  - Dentro do diretório `src/Battle` existe um arquivo `Battle.ts` com uma classe abstrata de batalha criada. Os arquivos deste diretório estão comentados e podem ser usados de exemplo para a construção do projeto. Durante a execução do projeto, no **requisito 6 - Crie a interface `Fighter`**, será pedido para você descomentar os arquivos. Só descomente quando chegar lá, senão haverá erro de lint;
-
   - Preste atenção ao padrão do projeto, onde cada diretório possui um arquivo `index.ts` exportando as informações necessárias, tomando cuidado para não ter problemas na execução dos testes.
 
 </details>
@@ -104,15 +100,11 @@
 
   ### Dica: desativando testes
 
-  Especialmente no início, quando a maioria dos testes está falhando, a saída após executar os testes é bastante poluída. Você pode desabilitar temporariamente um teste utilizando a função `skip` junto à função `describe`. Como o nome indica, esta função "pula" um teste:
+  Caso precise executar um teste específico e a saída após executar os testes ficar bastante poluída. Você pode desabilitar temporariamente um teste utilizando a função `skip` junto à função `describe`. Como o nome indica, esta função "pula" um teste:
 
   ```typescript
   describe.skip('...', () => {})
   ```
-
-  Uma estratégia é pular todos os testes no início e ir implementando um teste de cada vez, removendo dele a função `skip`.
-
-  ⚠️ Lembre-se de não entregar o projeto com nenhum teste ignorado. **Testes ignorados serão tratados como testes falhando**. ⚠️
 
   ⚠️ **Não apague, em hipótese alguma, qualquer teste ou arquivo deste repositório**. ⚠️
 
@@ -131,13 +123,9 @@
 
   Boa parte dos seres podem ser considerados lutadores, bastando para isso possuir alguns atributos específicos. Em muitas ocasiões podem acontecer lutas entre personagens diversas, bem como entre personagens e monstros.
 
-  Agora, cabe a você, nobre ~~dev~~, explorar essas terras e cumprir as quests que surgirão ao longo da sua incrível ~~jornada~~ leitura do README.
-
-  **_Now, follow ~~the blind~~ the dungeon master!_**
-
 </details>
 
-### 1 - Crie a classe `Race`
+### 1 - Classe `Race`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
@@ -145,10 +133,6 @@
 No universo de Trybers and Dragons - T&D, quase todos os seres racionais têm uma raça e, embora todas as raças de personagens sejam humanoides, cada uma tem as suas particularidades.
 
 A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos habitantes desse universo.
-
-Para entender melhor um pouco da incrível diversidade que temos e as características únicas de algumas das raças de T&D, vamos começar nossa jornada com a missão de **criar a classe abstrata `Race`**.
-
-Para que você tenha sucesso nesta *quest*, é importante saber que:
 
 - O arquivo foi criado no diretório `src/Races/` e chamar `Race.ts`;
 - A classe `Race` deve ter os atributos privados: `name` e `dexterity`, ambos inicializados em seu **construtor**;
@@ -167,7 +151,7 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
   - Cada raça terá seu número máximo de pontos, **que será definido dentro de cada classe especializada**;
   - Na classe `Race` **deve estar apenas a assinatura do método**.
 
-> Dica: use a convenção de atributos privados para criar os atributos **com** `_` e os getters para expor os atributos **sem** o `_`.
+> OBS: usei a convenção de atributos privados para criar os atributos **com** `_` e os getters para expor os atributos **sem** o `_`.
 <br>
 
 > ⚠️ **Atenção**:
@@ -179,7 +163,7 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
 </details>
 
 <details close>
-  <summary><strong> 🔎 O que será verificado</strong></summary>
+  <summary><strong> Validações</strong></summary>
 
   > :dragon_face: Para a classe Race:
   - A classe `Race` existe;
@@ -197,14 +181,12 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
 
 ---
 
-### 2 - Crie classes que herdam de `Race`
+### 2 - Classes que herdam de `Race`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
   
-Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda *quest*, você irá criar classes para quatro raças que existem no mundo de T&D.
-
-Antes de prosseguir com a missão, é muito importante saber que:
+Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Foram criadas classes para quatro raças que existem no mundo de T&D.
 
 - Os arquivos devem ser criados no diretório `src/Races/`;
 - Todas as raças devem estender da classe abstrata `Race`;
@@ -228,7 +210,7 @@ Antes de prosseguir com a missão, é muito importante saber que:
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para as classe que herdam de Race:
   - A classe `Dwarf` existe;
@@ -260,7 +242,7 @@ Antes de prosseguir com a missão, é muito importante saber que:
 
 ---
 
-### 3 - Crie a interface `Energy`
+### 3 - Interface `Energy`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
@@ -268,7 +250,7 @@ Antes de prosseguir com a missão, é muito importante saber que:
 Energia é um atributo vital para a maioria dos seres. No contexto de `Trybers and Dragons`, a energia gasta ao se andar, nadar, escalar ou lutar é chamada de *"stamina"* .
 Contudo, esse universo também abriga seres capazes de usar magia. Nesses casos, a energia gasta é chamada de *"mana"*.
 
-Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"stamina"* e *"mana"*. Para isso:
+Deve tornar possível o uso destes dois tipos de energia:  *"stamina"* e *"mana"*.
 
 - Crie uma `interface` chamada `Energy`, para isso:
   - Crie o arquivo `Energy.ts` na raiz do diretório `src/`.
@@ -278,8 +260,7 @@ Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"
       - O tipo `EnergyType` também deve ser exportado.
     - `amount`, do tipo `number`.
 
-✨ Dica de mestre: ✨
-- Para implementar a `interface Energy`, é necessário criar um tipo novo, o `type EnergyType`;
+>OBS: Para implementar a `interface Energy`, é necessário criar um tipo novo, o `type EnergyType`;
 
 <br>
 
@@ -291,7 +272,7 @@ Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a interface Energy:
   - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'mana'`;
@@ -305,15 +286,13 @@ Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"
 
 ---
 
-### 4 - Crie a classe `Archetype`
+### 4 - Classe `Archetype`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
   
 Dentro do nosso universo, os seres têm talentos especiais e cada um desses talentos tem o seu nome dentro de T&D.
-Aqui vamos ter alguns atributos super legais e necessários, que representarão o nome, a potência do seu ataque especial e o custo energético para utilizá-lo. Por isso, sua próxima *quest* será **criar a classe abstrata `Archetype`**.
-
-Para que você tenha sucesso nesta *quest*, é importante saber que:
+Aqui vamos ter alguns atributos super legais e necessários, que representarão o nome, a potência do seu ataque especial e o custo energético para utilizá-lo. Por isso, deve **criar a classe abstrata `Archetype`**.
 
 - O arquivo `Archetype.ts` deve ser criado no diretório `src/Archetypes/`;
 - A classe `Archetype` deve ter os atributos privados: `name`, `special`, `cost`, que serão inicializados em seu **construtor**;
@@ -346,7 +325,7 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
   <br>
 
   > :dragon_face: Para a classe Archetype:
@@ -361,7 +340,7 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
 
 ---
 
-### 5 - Crie classes que herdam de `Archetype`
+### 5 - Classes que herdam de `Archetype`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
@@ -394,7 +373,7 @@ Para isto, atenção às instruções a seguir:
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para as classes que herdam de Archetype:
   - A classe `Mage` existe;
@@ -421,14 +400,12 @@ Para isto, atenção às instruções a seguir:
 
 ---
 
-### 6 - Crie a interface `Fighter`
+### 6 - Interface `Fighter`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
   
 Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos, convicções e personalidades pode não ser um lugar sempre amigável. Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas. Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
-
-Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`. Mas não se preocupe! Não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe as orientações abaixo:
 
 - Crie uma `interface` chamada `Fighter`;
 - O arquivo `Fighter.ts` deve ser criado no diretório `src/Fighter/`;
@@ -443,10 +420,9 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   - `levelUp()`, que não recebe parâmetro e não possui retorno (`void`);
   - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`).
 
-✨ Dica de mestre: ✨
+>OBS:
 - O atributo `energy` deve ser opcional;
   - Pesquise sobre: `Optional Properties` ou `Optional parameters` em interfaces;
-- Agora você pode descomentar os trechos de código dos arquivos do diretório `Battle`; (`Battle.ts` e `index.ts`).
 
 <br>
 
@@ -459,7 +435,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a interface Fighter:
   - A interface `Fighter` existe;
@@ -476,16 +452,14 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
 
 ---
 
-### 7 - Crie a classe `Character`
+### 7 - Classe `Character`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
 
-Maravilha! Agora já temos tanto as nossas raças quanto os nossos arquétipos e interfaces definidos. Mas antes de sair por aí entrando em tavernas e calabouços, temos outra *quest*: **criar uma personagem**!
+Maravilha! Agora já temos tanto as nossas raças quanto os nossos arquétipos e interfaces definidos. Mas antes de sair por aí entrando em tavernas e calabouços, temos que **criar uma personagem**!
 
 Cada personagem será composta tanto por uma raça quanto por um arquétipo. Essa classe reunirá um conjunto de características que terão o poder de fazer desse ser o mais único possível. Além disso, personagens devem possuir tudo o que se espera de alguém que luta.
-
-As dicas para completar essa *quest* são: 
 
 - O arquivo deve ser criado na raiz do diretório `src/` e se chamar `Character.ts`;
 - A classe deve implementar a interface `Fighter`;
@@ -536,9 +510,6 @@ As dicas para completar essa *quest* são:
     - Aqui você pode expandir sua mente e realizar a lógica que achar mais interessante para um ataque especial, use tudo que aprendeu no mundo de T&D! :dragon_face:
     - Esta parte do requisito não esta sendo avalida é apenas para você se divertir aprendendo. 💚
 
-✨ Dica de mestre: ✨
-- Para gerar valores aleatórios, use a função `getRandomInt` fornecida no arquivo `src/utils.ts`.
-
 <br>
 
 > ⚠️ **Atenção**:
@@ -548,7 +519,7 @@ As dicas para completar essa *quest* são:
 </details>
 
 <details close>
-  <summary>🔎 O que será verificado</strong></summary>
+  <summary>Validações</strong></summary>
 
   > :dragon_face: Para a classe Character:
   - A classe `Character` existe;
@@ -567,14 +538,12 @@ As dicas para completar essa *quest* são:
 
 ---
 
-### 8 - Crie a interface `SimpleFighter`
+### 8 - Interface `SimpleFighter`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
 
-Uau, o nosso universo de T&D está ficando fabuloso! No entanto, nem todo mundo que luta possui capacidades avançadas, como ter uma defesa ou realizar ataques especiais. Dito isto, vamos para mais uma *quest*: **criar a interface lutador simples**
-
-As dicas para completar essa *quest* são:
+Uau, o nosso universo de T&D está ficando fabuloso! No entanto, nem todo mundo que luta possui capacidades avançadas, como ter uma defesa ou realizar ataques especiais. Dito isto, precisamos criar: **Interface lutador simples**
 
 - Crie uma `interface` chamada `SimpleFighter`;
 - O arquivo `SimpleFighter.ts` deve ser criado no diretório `src/Fighter/`.
@@ -596,7 +565,7 @@ As dicas para completar essa *quest* são:
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a interface SimpleFighter:
   - A interface `SimpleFighter` existe;
@@ -608,14 +577,12 @@ As dicas para completar essa *quest* são:
 
 ---
 
-### 9 - Crie a classe `Monster`
+### 9 - Classe `Monster`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
 
-Se existem seres que implementam a `interface Fighter`, deve existir seres que implementam a `interface SimpleFighter` também, não é ? Estes são os `Monsters`, criaturas bestiais que apenas atacam outros seres. Então, sua próxima *quest* é: **criar a classe Monster**!
-
-O que você deve saber para seguir em frente:
+Se existem seres que implementam a `interface Fighter`, deve existir seres que implementam a `interface SimpleFighter` também, não é ? Estes são os `Monsters`, criaturas bestiais que apenas atacam outros seres.
 
 - O arquivo deve ser criado na raiz do diretório `src/` e chamar `Monster.ts`;
 - A classe deve implementar a interface `SimpleFighter`;
@@ -638,8 +605,8 @@ O que você deve saber para seguir em frente:
 
 <br>
 
-✨ Dica de mestre: ✨
-- Aqui vamos precisar que os métodos de `Fighter` que recebiam um inimigo do tipo `Fighter` agora possam receber um `SimpleFighter`. Assim um `Fighter` pode atacar um `Monster` 😄.
+>OBS:
+- Foi preciso que os métodos de `Fighter` que recebiam um inimigo do tipo `Fighter` agora possam receber um `SimpleFighter`. Assim um `Fighter` pode atacar um `Monster` 😄.
 
 > ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Monster` deve ser exportada de forma padrão ( com `export default`).
@@ -648,7 +615,7 @@ O que você deve saber para seguir em frente:
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a classe Monster:
   - A classe `Monster` existe;
@@ -662,7 +629,7 @@ O que você deve saber para seguir em frente:
 
 ---
 
-### 10 - Crie a classe `PVP`
+### 10 - Classe `PVP`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
@@ -670,22 +637,17 @@ O que você deve saber para seguir em frente:
 A ideia do mundo de T&D ser completamente pacífico provavelmente já deve ter desaparecido da sua mente depois das suas últimas *quests*. 
 Nesse mundo, existem lutas, muitas delas inclusive épicas, denominadas `Battles` (batalhas). Sua representação geral/abstrata já foi fornecida anteriormente, entretanto, existem tipos específicos de batalhas. Uma dessas batalhas chamamos de `PVP`, batalhas entre personagens (ou *player versus player*), que só podem acontecer entre personagens lutadores (`Fighters`). 🧙‍♀️ ⚔️ 🧙‍♂️
 
-Sua *quest* agora é justamente **criar a classe PVP**, então, você que lute ! 🗡️😂
-Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dicas preciosas para garantir a sua vitória neste requisito:
-
 - O arquivo deve ser criado no diretório `src/Battle/` e se chamar `PVP.ts`;
 - A classe `PVP` deve herdar de `Battle`;
 - A classe `Battle` já esta criada, dê uma espiada nela; 🧐
 - Na criação de uma instância de `PVP` é esperado que em seu construtor sejam recebidos dois `Characters` lutadores, ambos inicializados lá;
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s). ✨✨
 
-✨ Dica de mestre: ✨
-- Use um dos _players_ para ser parâmetro do `super` na inicialização e use o método `fight` do super para dar o veredito da batalha, ou seja, se `super.fight()` retornar 1 o _player_ quer foi usado como parâmetro do `super` na inicialização ganhou, e se retornar -1 a vitória foi do _player_ que não foi o parâmetro do `super`; 
+>OBS:
+- Usei um dos _players_ para ser parâmetro do `super` na inicialização e use o método `fight` do super para dar o veredito da batalha, ou seja, se `super.fight()` retornar 1 o _player_ quer foi usado como parâmetro do `super` na inicialização ganhou, e se retornar -1 a vitória foi do _player_ que não foi o parâmetro do `super`; 
 
 - Aqui ~~podemos~~ devemos sobrescrever o método `fight`;
-  - No método `fight` sobrescrito, implemente uma lógica de ataque entre personagens lutadores da classe;
-- Se necessário, refatore o que já foi feito com as interfaces `Fighter` e `SimpleFighter` para se adequarem melhor à sua nova implementação de batalha;
-- Não esqueça de descomentar os trechos de código dos arquivos do diretório `Battle` como citado nas "Dica de mestre" do requisito 6 - Crie a interface `Fighter`.
+  - No método `fight` sobrescrito, foi implementado uma lógica de ataque entre personagens lutadores da classe;
 
 <br>
 
@@ -697,7 +659,7 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
 </details>
 
 <details close>
-  <summary>🔎 O que será verificado</strong></summary>
+  <summary>Validações</strong></summary>
 
   > :dragon_face: Para a classe PVP:
   - A classe `PVP` existe e pode ser criada uma nova instância, passando dois `Characters` lutadores;
@@ -705,20 +667,15 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
   - A classe `PVP` pode receber tanto dois `Characters` quanto duas instâncias de uma implementação diferente de `Fighter`;
 </details>
 
----
 
-## Requisitos Bônus
-
-### 11 - Criar a classe `PVE`
+### 11 - Classe `PVE`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
 
 Nem todas as batalhas são entre personagens lutadoras (`Character`), afinal, há perigos à solta que espreitam ao escurecer, em densas florestas ou em calabouços profundos.
 
-Monstros representam alguns destes perigos, assim, temos as batalhas do tipo `PVE`(*player versus environment*), em que personagens (sempre do tipo `Fighter`) podem lutar contra um ou mais monstros assustadores (`SimpleFighter`). Parece interessante, não é? Tornar isso possível é a sua próxima *quest*! 🧙‍♀️ ⚔️ 👾👹👻
-
-Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!! Só assim obteremos sucesso e prosperidade:
+Monstros representam alguns destes perigos, assim, temos as batalhas do tipo `PVE`(*player versus environment*), em que personagens (sempre do tipo `Fighter`) podem lutar contra um ou mais monstros assustadores (`SimpleFighter`). 🧙‍♀️ ⚔️ 👾👹👻
 
 - O arquivo deve ser criado no diretório `src/Battle/` e se chamar `PVE.ts`;
 - A classe `PVE` deve herdar de `Battle`;
@@ -738,7 +695,7 @@ Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!!
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a classe PVE:
   - A classe `PVE` existe e se pode ser criada uma nova instância, passando um `Character` e um array com um `Monster`;
@@ -748,7 +705,7 @@ Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!!
 
 ---
 
-### 12 - Crie a classe `Dragon`
+### 12 - Classe `Dragon`
 
 <details>
   <summary><strong>➕ Detalhes </strong></summary>
@@ -756,14 +713,9 @@ Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!!
 Seria muito estranho se esse mundo se chamasse Trybers and Dragons e não existissem `Dragons`, não é mesmo?
 Estes seres magníficos são representados como monstros aqui, mas com a característica especial de possuírem elevados valores de pontos de vida.
 
-Nesta *quest*, você deve **criar a classe `Dragon`**, cuidando para garantir que:
-
 - O arquivo deve ser criado na raiz de `src/` e se chamar `Dragon.ts`;
 - A classe `Dragon` deve herdar de `Monster`;
 - Como citado acima, um Dragão tem elevados valores de pontos de vida, então em seu construtor defina o valor de `_lifePoints` para algo como 999; :dragon_face::dragon_face:
-
-:dragon_face: Dica de mestre: :dragon_face:
-- Aqui é interessante voltar no conteúdo do course sobre **Herança e Interfaces** e relembrar um pouco de **Atributos protegidos**;
 
 <br>
 
@@ -774,7 +726,7 @@ Nesta *quest*, você deve **criar a classe `Dragon`**, cuidando para garantir qu
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a classe Dragon:
   - A classe `Dragon` existe;
@@ -792,8 +744,6 @@ Nesta *quest*, você deve **criar a classe `Dragon`**, cuidando para garantir qu
 Você já modelou todo o mundo de T&D, maravilha!
 
 Agora repare que, por mais que a gente saiba o que são `Monster`, `Character`, `Dragon`, `PVE`, etc, nenhum desses foi visto em ação. Então a sua última *quest* para completar essa aventura é dar vida às suas personagens e criar algumas instâncias das classes criadas anteriormente. 🪄
-
-Algumas dicas se fazem necessárias para completar sua última missão no mundo de T&D. Elas são:
 
 - O arquivo deve ser criado na raiz de `src/` e se chamar `index.ts`;
 - ⚠️ Preste bastante atenção nos nomes das variáveis/métodos e nas exportações pedidas deste último requisito; :wink:.
@@ -820,9 +770,6 @@ Algumas dicas se fazem necessárias para completar sua última missão no mundo 
   - Dentro da função, crie uma repetição percorrendo este array e chame o método `fight`;
   - Ao final do arquivo `index.ts` exporte `runBattles`.
 
-✨ Última dica de mestre: ✨
-- Lembre-se `Battle` não pode ser instanciada, pois é uma classe abstrata;
-
 <br>
 
 > ⚠️ **Atenção**:
@@ -832,7 +779,7 @@ Algumas dicas se fazem necessárias para completar sua última missão no mundo 
 </details>
 
 <details close>
-  <summary><strong>🔎 O que será verificado</strong></summary>
+  <summary><strong>Validações</strong></summary>
 
   > :dragon_face: Para a criação de objetos no arquivo index:
   - Existem 3 objetos do tipo `Character` no arquivo `index`, exportados como `player1`, `player2` e `player3` e o método `levelUp` foi chamado algumas vezes em `player1`
